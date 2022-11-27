@@ -15,8 +15,8 @@
             for (let i = 0; i < cellColumns; i++) {
                 for (let j = 0; j < cellColumns; j++) {
                     cell = document.createElement('div');
-                    cell.className = 'gridCell ' + 'gridCell' + (i + j);
-                    cell.textContent = (i + j);
+                    cell.className = 'gridCell ' + 'gridCell' + ((i*cellRows) + j);
+                    cell.textContent = ((i*cellRows) + j);
                     gridContainer.appendChild(cell);
                 }
             }
