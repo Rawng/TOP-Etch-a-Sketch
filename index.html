@@ -7,5 +7,19 @@
     </head>
     <body>
         <div id="gridContainer"></div>
+        <script>
+            let gridContainer = document.querySelector('#gridContainer');
+            let cellColumns = 16;
+            let cellRows = 16;
+            let cell = null;
+            for (let i = 0; i < cellColumns; i++) {
+                for (let j = 0; j < cellColumns; j++) {
+                    cell = document.createElement('div');
+                    cell.className = 'gridCell ' + 'gridCell' + (i + j);
+                    cell.textContent = (i + j);
+                    gridContainer.appendChild(cell);
+                }
+            }
+        </script>
     </body>
 </html>
