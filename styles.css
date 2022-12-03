@@ -5,6 +5,11 @@ body {
     align-items: center;
 }
 
+#radioContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 #gridContainer {
     display: grid;
     grid-template-columns: repeat(16, 32px);
