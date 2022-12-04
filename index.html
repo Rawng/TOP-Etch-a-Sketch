@@ -22,11 +22,16 @@
             let cellColumns = 16;
             let cellRows = 16;
             let cell = null;
-            for (let i = 0; i < cellColumns; i++) {
-                for (let j = 0; j < cellRows; j++) {
+            for (let i = 0; i < cellRows; i++) {
+                for (let j = 0; j < cellColumns; j++) {
                     cell = document.createElement('div');
-                    cell.className = 'gridCell ' + 'gridCell' + ((i*cellRows) + j);
-                    cell.textContent = ((i*cellRows) + j);
+                    cell.className = 'gridCell ' + 'gridCell' + ((i*cellRows) + j) + ' cellsBottomRight';
+                    if (i == 0) {
+                        cell.className += ' cellsTop';
+                    }
+                    if (j == 0) {
+                        cell.className += ' cellsLeft';
+                    }
                     gridContainer.appendChild(cell);
                 }
             }

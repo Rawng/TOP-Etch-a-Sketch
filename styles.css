@@ -19,3 +19,20 @@ body {
 .hovered {
     background-color: black;
 }
+
+.gridCell {
+    border-width: thin;
+}
+
+.cellsTop {
+    border-top: solid;
+}
+
+.cellsLeft {
+    border-left: solid;
+}
+
+.cellsBottomRight {
+    border-bottom: solid;
+    border-right: solid;
+}
