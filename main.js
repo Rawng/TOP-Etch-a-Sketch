@@ -1,17 +1,29 @@
 function paint(event) {
     let color = colorMode();
     if (event.altKey) {
-        event.target.classList.add('hovered');
+        if (color == 'black') {
+            event.target.style.backgroundColor = 'black';
+        } else if (color == 'color') {
+            event.target.style.backgroundColor = getRandomColor();
+        } else {
+            event.target.style.backgroundColor = 'white';
+        }
     }
 }
 
 function colorMode() {
+    let radioChoice = '';
     let colorModeRadio = document.getElementsByName('color');
     colorModeRadio.forEach((button) => {
         if (button.checked) {
-            return button.value
+            radioChoice = button.value;
         }
-    })
+    });
+    return radioChoice;
+}
+
+function getRandomColor() {
+    return '#333333';
 }
 
 const gridCells = document.querySelectorAll('.gridCell');
